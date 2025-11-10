@@ -1,2 +1,19 @@
-# LMS-ABC
-MVP de Learning Management System para la Institución Educativa ABC. Gestiona docentes, cursos, módulos y lecciones con CRUD completo. Autenticación para administrativos, vista pública para estudiantes. 100% frontend con HTML, CSS, JS y localStorage. Interfaz moderna y fácil de usar.
+# LMS ABC - MVP
+
+Sistema de gestión educativa para la Institución ABC.
+
+## Tecnologías
+- HTML, CSS, JavaScript
+- localStorage (persistencia)
+- Sin backend
+
+## Cómo ejecutar
+1. Clona el repositorio
+2. Abre `index.html` en el navegador
+3. Login: `admin@abc.edu.co` / `123456`
+
+## Módulos
+- Login
+- Dashboard (estadísticas)
+- Gestión de Docentes, Cursos (con módulos y lecciones), Administrativos
+- Vista pública de cursos

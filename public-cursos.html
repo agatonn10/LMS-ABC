@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cursos Públicos - LMS ABC</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Cursos Disponibles</h1>
+    <a href="index.html">Login Admin</a>
+  </header>
+
+  <div id="cursosPublicos" class="cursos-grid"></div>
+
+  <script src="js/storage.js"></script>
+  <script>
+    const cursos = DB.get("cursos");
+    const container = document.getElementById("cursosPublicos");
+    if (cursos.length === 0) {
+      container.innerHTML = "<p>No hay cursos disponibles.</p>";
+    } else {
+      container.innerHTML = cursos.map(c => `
+        <div class="curso-card">
+          <h3>${c.nombre}</h3>
+          <p>${c.descripcion}</p>
+          <small>Docente: ${c.docenteNombre || 'Sin asignar'}</small>
+        </div>
+      `).join("");
+    }
+  </script>
+</body>
+</html>
